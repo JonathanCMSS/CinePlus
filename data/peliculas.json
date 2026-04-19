@@ -2,25 +2,81 @@
   {
     "id": 1,
     "titulo": "Dune",
+    "generos": ["Ciencia Ficción", "Aventura", "Drama"],
     "imagen": "dune.jpg",
-    "genero": "Aventura",
-    "sinopsis": "Un joven emprende una misión para salvar su mundo.",
-    "trailer": "https://www.youtube.com/embed/mSY_NbSmaUI"
+    "sinopsis": "Paul Atreides, un joven brillante nacido con un gran destino más allá de su comprensión, debe viajar al planeta más peligroso del universo para asegurar el futuro de su familia y su gente. Mientras las fuerzas malévolas se desatan en conflicto por el suministro exclusivo del más preciado recurso del planeta, solo aquellos que puedan conquistar su miedo sobrevivirán. Esta épica historia de política, traición, coraje y poder cambiará el destino del universo para siempre.",
+    "trailer": "https://www.youtube.com/embed/mSY_NbSmaUI",
+    "estreno": "2026-05-10",
+    "precios": { "estreno": 12.50, "normal": 8.00 }
   },
   {
     "id": 2,
-    "titulo": "50 primeras citas",
+    "titulo": "50 Primeras Citas",
+    "generos": ["Comedia", "Romance"],
     "imagen": "50-primeras-citas.jpg",
-    "genero": "Comedia",
-    "sinopsis": "Henry se enamora de Lucy, una mujer con pérdida de memoria a corto plazo.",
-    "trailer": "https://www.youtube.com/embed/17KJk3ErIx0"
+    "sinopsis": "Henry Roth es un veterinario marino que vive en Hawaii y huye de las relaciones serias. Todo cambia cuando conoce a Lucy Whitmore en un restaurante local y se enamora perdidamente de ella. Sin embargo, descubre que Lucy sufre una condición médica que le impide retener recuerdos a corto plazo: cada mañana despierta sin recordar nada del día anterior. A pesar del obstáculo, Henry decide conquistarla cada día con nuevas estrategias, demostrando que el amor verdadero no tiene límites.",
+    "trailer": "https://www.youtube.com/embed/17KJk3ErIx0",
+    "estreno": "2024-02-14",
+    "precios": { "estreno": 12.50, "normal": 7.00 }
   },
   {
     "id": 3,
-    "titulo": "Batman Caballero de la Noche",
+    "titulo": "Batman: El Caballero de la Noche",
+    "generos": ["Acción", "Crimen", "Drama"],
     "imagen": "batman-caballero-de-la-noche.webp",
-    "genero": "Acción",
-    "sinopsis": "La película comienza con el violento robo de uno de los bancos de la mafia por una banda de payasos.",
-    "trailer": "https://www.youtube.com/embed/dzQtWkpc2-c"
+    "sinopsis": "Batman eleva su lucha contra el crimen a un nuevo nivel cuando un criminal conocido como el Joker siembra el caos y la anarquía entre la población de Gotham City. Con la ayuda del teniente Jim Gordon y del fiscal Harvey Dent, Batman intenta eliminar el crimen organizado que plaga las calles. Pero el Joker tiene otros planes y pone a prueba cada límite moral del Caballero Oscuro, explorando la delgada línea entre el héroe y el villano, el bien y el mal.",
+    "trailer": "https://www.youtube.com/embed/dzQtWkpc2-c",
+    "estreno": "2023-07-18",
+    "precios": { "estreno": 12.50, "normal": 8.50 }
+  },
+  {
+    "id": 4,
+    "titulo": "Spider-Man: Sin Camino a Casa",
+    "generos": ["Acción", "Aventura", "Ciencia Ficción"],
+    "imagen": "spiderman.jpg",
+    "sinopsis": "Por primera vez en la historia cinematográfica de Spider-Man, nuestro amigo y vecino arácnido es desenmascarado y ya no puede separar su vida normal de las grandes responsabilidades de ser un superhéroe. Cuando pide ayuda al Doctor Strange para guardar su secreto, el hechizo abre el multiverso y los enemigos más poderosos que Peter Parker ha combatido en otros universos comienzan a aparecer. Peter tendrá que enfrentarse a los villanos de otros mundos y reconsiderar lo que realmente significa ser Spider-Man.",
+    "trailer": "https://www.youtube.com/embed/JfVOs4VSpmA",
+    "estreno": "2026-12-16",
+    "precios": { "estreno": 13.00, "normal": 9.00 }
+  },
+  {
+    "id": 5,
+    "titulo": "Avatar: El Camino del Agua",
+    "generos": ["Ciencia Ficción", "Aventura", "Acción"],
+    "imagen": "avatar2.jpg",
+    "sinopsis": "Jake Sully vive con su nueva familia formada en el maravilloso planeta de Pandora. Una vez que una familiar amenaza regresa para terminar lo que fue comenzado anteriormente, Jake debe trabajar con Neytiri y el ejército de la raza Na'vi para proteger su planeta. Juntos exploran las regiones oceánicas de Pandora, descubriendo nuevas criaturas y culturas submarinas. La historia explora los temas del amor familiar, la pertenencia cultural y la resistencia ante la colonización y la destrucción ambiental.",
+    "trailer": "https://www.youtube.com/embed/d9MyW72ELq0",
+    "estreno": "2024-12-16",
+    "precios": { "estreno": 12.50, "normal": 8.00 }
+  },
+  {
+    "id": 6,
+    "titulo": "Top Gun: Maverick",
+    "generos": ["Acción", "Drama"],
+    "imagen": "topgun.jpg",
+    "sinopsis": "Después de más de treinta años de servicio como uno de los mejores aviadores de la Marina, Pete Maverick Mitchell sigue donde pertenece, superando los límites como valiente piloto de pruebas y esquivando el ascenso en el escalafón. Cuando se encuentra adiestrando a un grupo de graduados de Top Gun para una misión especializada, Maverick enfrenta un pasado oscuro y sus propios demonios mientras lidera a los jóvenes en una misión de alto riesgo que pondrá a prueba sus límites y los de todo su equipo.",
+    "trailer": "https://www.youtube.com/embed/giXco2jaZ_4",
+    "estreno": "2023-05-27",
+    "precios": { "estreno": 12.50, "normal": 7.50 }
+  },
+  {
+    "id": 7,
+    "titulo": "El Rey León",
+    "generos": ["Animación", "Aventura", "Drama"],
+    "imagen": "reyLeon.jpg",
+    "sinopsis": "Simba idolatra a su padre, el Rey Mufasa, y tiene su futuro bien planeado hasta que su malvado tío Scar trama derrocar al rey. La tragedia y la traición empujan al joven príncipe al exilio, donde hace amistad con el peculiar dúo Timón y Pumba. Los años pasan y Simba debe decidir si ignorar su pasado o reclamar su lugar en el Ciclo de la Vida, asumiendo el destino que le corresponde en una historia sobre amor, pérdida, identidad y valentía.",
+    "trailer": "https://www.youtube.com/embed/lFzVJEksoDY",
+    "estreno": "2026-06-15",
+    "precios": { "estreno": 11.00, "normal": 7.00 }
+  },
+  {
+    "id": 8,
+    "titulo": "Interstellar",
+    "generos": ["Ciencia Ficción", "Drama", "Aventura"],
+    "imagen": "interstellar.jpg",
+    "sinopsis": "Un grupo de exploradores usa un agujero de gusano recientemente descubierto para superar las limitaciones del viaje espacial humano y conquistar las vastas distancias interestelares. Cooper, un ex piloto convertido en agricultor, es reclutado por la NASA para liderar esta misión crítica. A través de planetas desconocidos y dimensiones inexploradas, debe elegir entre ver crecer a sus hijos o salvar a la humanidad del colapso inminente de la Tierra, enfrentando los más profundos dilemas del amor y el tiempo.",
+    "trailer": "https://www.youtube.com/embed/zSWdZVtXT7E",
+    "estreno": "2023-11-07",
+    "precios": { "estreno": 12.50, "normal": 8.00 }
   }
 ]

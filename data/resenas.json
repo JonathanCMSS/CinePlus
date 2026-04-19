@@ -1,0 +1,52 @@
+{
+  "1": [
+    { "autor": "Carlos M.", "texto": "Una obra maestra visual. La historia de Paul Atreides es épica y absorbente desde el primer minuto.", "calificacion": 5 },
+    { "autor": "María L.", "texto": "Impresionante fotografía y actuaciones. Villeneuve logra capturar la esencia del libro perfectamente.", "calificacion": 5 },
+    { "autor": "Andrés P.", "texto": "Muy buena película aunque algo lenta en ciertos momentos. El mundo de Arrakis está increíblemente bien construido.", "calificacion": 4 },
+    { "autor": "Sofía R.", "texto": "Las escenas de batalla son espectaculares. Definitivamente una de las mejores películas del año.", "calificacion": 4 }
+  ],
+  "2": [
+    { "autor": "Valentina G.", "texto": "Una película romántica muy tierna y emotiva. Adam Sandler y Drew Barrymore tienen una química increíble.", "calificacion": 4 },
+    { "autor": "Roberto H.", "texto": "Me hizo reír y llorar al mismo tiempo. Una comedia romántica con corazón que vale mucho la pena ver.", "calificacion": 5 },
+    { "autor": "Diana F.", "texto": "Historia original y conmovedora. La actuación de Drew Barrymore es especialmente destacable y muy creíble.", "calificacion": 4 },
+    { "autor": "Mauricio S.", "texto": "Buena película para ver en pareja. El concepto de la pérdida de memoria está tratado con mucha sensibilidad.", "calificacion": 3 }
+  ],
+  "3": [
+    { "autor": "Fernando B.", "texto": "El Joker de Heath Ledger es simplemente legendario. Una actuación que nunca olvidaré mientras viva.", "calificacion": 5 },
+    { "autor": "Lucía T.", "texto": "Una de las mejores películas de superhéroes jamás filmadas. La historia es profunda y muy bien desarrollada.", "calificacion": 5 },
+    { "autor": "Pablo E.", "texto": "Nolan logra crear un thriller policial excepcional con un trasfondo de superhéroes muy bien integrado.", "calificacion": 5 },
+    { "autor": "Ana C.", "texto": "Impecable en todos los sentidos. Guión, dirección, fotografía y actuaciones de altísimo nivel cinematográfico.", "calificacion": 5 },
+    { "autor": "Jorge N.", "texto": "Un clásico moderno del cine. Cada vez que la veo descubro algo nuevo en sus capas narrativas.", "calificacion": 4 }
+  ],
+  "4": [
+    { "autor": "Daniela V.", "texto": "El multiverso está increíblemente bien ejecutado. Ver a todos los Spider-Man juntos fue una experiencia única.", "calificacion": 5 },
+    { "autor": "Sebastián O.", "texto": "Una película que recompensa a los fans de toda la vida. Llena de momentos emotivos y muy bien logrados.", "calificacion": 5 },
+    { "autor": "Camila A.", "texto": "Los efectos especiales son alucinantes y la trama tiene mucho corazón. Tom Holland da lo mejor de sí.", "calificacion": 4 },
+    { "autor": "Miguel R.", "texto": "Superó todas mis expectativas. El final es emocionalmente devastador pero completamente satisfactorio.", "calificacion": 5 }
+  ],
+  "5": [
+    { "autor": "Isabella M.", "texto": "Las imágenes submarinas son de otro mundo. Cameron vuelve a superar sus propios límites creativos.", "calificacion": 5 },
+    { "autor": "Tomás L.", "texto": "Visualmente es un festín para los ojos, aunque la historia es algo sencilla comparada con la primera entrega.", "calificacion": 3 },
+    { "autor": "Gabriela C.", "texto": "La familia Sully es muy entrañable. Me emocioné mucho con los momentos entre padre e hijos durante toda la película.", "calificacion": 4 },
+    { "autor": "Emilio D.", "texto": "Técnicamente es revolucionaria. La tecnología de captura de movimiento bajo el agua nunca antes se había logrado.", "calificacion": 4 }
+  ],
+  "6": [
+    { "autor": "Ricardo P.", "texto": "Tom Cruise vuelve a demostrar por qué es una leyenda del cine de acción. Las escenas de vuelo son increíbles.", "calificacion": 5 },
+    { "autor": "Patricia S.", "texto": "Una secuela que supera ampliamente a la original. Llena de adrenalina y momentos emotivos muy bien balanceados.", "calificacion": 5 },
+    { "autor": "Oscar F.", "texto": "La escena final de la misión es de las más tensas que he visto en cine de acción moderno. Espectacular de principio a fin.", "calificacion": 5 },
+    { "autor": "Elena B.", "texto": "Gran película de acción con mucho corazón. Maverick es un personaje con mucha profundidad y carisma.", "calificacion": 4 }
+  ],
+  "7": [
+    { "autor": "Natalia G.", "texto": "Un remake visualmente espectacular. Las interpretaciones de los animales son increíblemente realistas y emotivas.", "calificacion": 4 },
+    { "autor": "Martín Q.", "texto": "La música de Elton John y Hans Zimmer sigue siendo mágica después de tantos años. Muy emotiva.", "calificacion": 4 },
+    { "autor": "Alejandra R.", "texto": "Ideal para ver con toda la familia. Los niños quedan fascinados y los adultos se emocionan con nostalgia.", "calificacion": 5 },
+    { "autor": "Cristian H.", "texto": "Beyoncé y Donald Glover hacen un trabajo vocal excelente. La historia clásica sigue siendo conmovedora.", "calificacion": 3 }
+  ],
+  "8": [
+    { "autor": "Leonardo V.", "texto": "La película que más me ha hecho pensar en mucho tiempo. La física del tiempo y el espacio es fascinante.", "calificacion": 5 },
+    { "autor": "Stephanie M.", "texto": "Hans Zimmer crea la banda sonora más épica que he escuchado. Nolan es un genio cinematográfico sin igual.", "calificacion": 5 },
+    { "autor": "Rodrigo A.", "texto": "Compleja e impactante. Requiere atención total pero la recompensa emocional e intelectual vale completamente el esfuerzo.", "calificacion": 4 },
+    { "autor": "Valeria E.", "texto": "Matthew McConaughey está brillante. El final me dejó completamente sin palabras durante varios minutos.", "calificacion": 5 },
+    { "autor": "Nicolás B.", "texto": "Una de las mejores películas de ciencia ficción de la historia. Visualmente impresionante y narrativamente poderosa.", "calificacion": 5 }
+  ]
+}
