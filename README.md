@@ -3,8 +3,9 @@
 **Materia:** Aplicaciones Web  
 **Universidad:** Universidad Politécnica Salesiana  
 **Unidad:** 1 - Diseño y creación de páginas web  
-**Tarea:** #1
-**Alumno:** Jonathan Cristhian Macias Soledispa
+**Tarea:** #1  
+**Alumno:** Jonathan Cristhian Macias Soledispa  
+**Repositorio:** https://github.com/JonathanCMSS/CinePlus
 
 ---
 
@@ -44,12 +45,12 @@ CinePlus/
 │   └── resenas.json        → Reseñas por película
 ├── img/                    → Imágenes de las películas
 ├── js/
-│   └── app.js              → Lógica principal (jQuery + AJAX)
+│   └── app.js             → Lógica principal (jQuery + AJAX)
 ├── pages/
-│   ├── detalle.html        → Detalle de película + reseñas
-│   ├── renta.html          → Formulario de renta
-│   └── contacto.html       → Formulario de contacto
-├── index.html              → Página principal
+│   ├── detalle.html       → Detalle de película + reseñas
+│   ├── renta.html         → Formulario de renta
+│   └── contacto.html      → Formulario de contacto
+├── index.html             → Página principal
 └── README.md
 ```
 
@@ -61,8 +62,11 @@ CinePlus/
    ```bash
    git clone https://github.com/JonathanCMSS/CinePlus.git
    ```
-2. Usar Live Server en VS Code para abrir el html.
-3. **Importante:** El proyecto usa AJAX para cargar los archivos JSON. Necesita ejecutarse desde un servidor local. Usa la extensión **Live Server** de VS Code.
+2. Abrir la carpeta en VS Code.
+3. Instalar la extensión **Live Server** si no la tienes.
+4. Clic derecho sobre `index.html` → **Open with Live Server**.
+
+> **Importante:** El proyecto usa AJAX para cargar los archivos JSON, por lo que necesita ejecutarse desde un servidor local. No abrir directamente como archivo en el navegador.
 
 ---
 
