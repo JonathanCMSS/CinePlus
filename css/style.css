@@ -1,0 +1,335 @@
+/* ============================================
+   CinePlus - Estilos Personalizados
+   Tema: Oscuro / Cinematográfico
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Variables de color */
+:root {
+  --primary: cyan;
+  --primary-dark: #2773F5;
+  --bg-dark: #141414;
+  --bg-card: #1f1f1f;
+  --text-main: #fff;
+  --text-muted: #fff;
+  --accent: #f5c518;
+}
+
+/* Base */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000 !important;
+  border-bottom: 2px solid var(--primary);
+}
+
+.navbar-brand {
+  color: var(--primary) !important;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary) !important;
+}
+
+/* Header */
+header.hero {
+  background: linear-gradient(135deg, #000 0%, #1a0000 50%, #000 100%);
+  border-bottom: 3px solid var(--primary);
+  padding: 3rem 1rem;
+}
+
+header.hero h1 {
+  color: var(--primary);
+  font-size: 2.8rem;
+  text-shadow: 0 0 20px rgba(229,9,20,0.5);
+}
+
+header.hero p {
+  color: var(--text-muted);
+}
+
+/* Cards de películas */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Solo las cards de la galería se ocultan para el efecto fadeIn con jQuery */
+#lista-peliculas .card {
+  display: none;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
+}
+
+.card img {
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 2px solid #333;
+}
+
+.card-title {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.card-text {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.badge-genero {
+  background-color: var(--primary);
+  color: #000;
+  font-size: 0.7rem;
+  margin-right: 4px;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+/* Botones */
+.btn-cineplus {
+  background-color: var(--primary);
+  color: #000;
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-cineplus:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+}
+
+.btn-trailer {
+  background-color: var(--accent);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-trailer:hover {
+  background-color: #d4a800;
+  color: #000;
+}
+
+/* Spinner */
+#spinner-carga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#spinner-carga .spinner-border {
+  width: 4rem;
+  height: 4rem;
+  color: var(--primary);
+}
+
+#spinner-carga p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Badge de estreno/normal */
+.badge-estreno {
+  background: linear-gradient(135deg, var(--primary), #ff6b6b);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.badge-cartelera {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+/* Precio */
+.precio-tag {
+  color: var(--accent);
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Estrellas de calificación */
+.estrellas {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.estrella-vacia {
+  color: #555;
+}
+
+/* Reseñas */
+.resena-card {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.resena-autor {
+  color: var(--primary);
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+.resena-texto {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: 5px;
+}
+
+/* Detalle de película */
+.detalle-sinopsis {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Formulario de contacto y renta */
+.form-control, .form-select {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: var(--text-main);
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #2a2a2a;
+  border-color: var(--primary);
+  color: var(--text-main);
+  box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25);
+}
+
+.form-label {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Modal */
+.modal-content {
+  background-color: var(--bg-card);
+  border: 1px solid #444;
+  color: var(--text-main);
+}
+
+.modal-header {
+  border-bottom: 1px solid #444;
+}
+
+.modal-footer {
+  border-top: 1px solid #444;
+}
+
+.modal-title {
+  color: var(--primary);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Alerta de bienvenida */
+.alert-bienvenida {
+  background: linear-gradient(135deg, #1a0000, #2a0000);
+  border: 1px solid var(--primary);
+  color: var(--text-main);
+  border-radius: 10px;
+}
+
+/* Footer fijo en la parte inferior */
+footer {
+  background-color: #000 !important;
+  border-top: 2px solid var(--primary);
+  color: var(--text-muted);
+  margin-top: auto;
+}
+
+/* Página de renta - lista de películas */
+.pelicula-check-label {
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.pelicula-check-label:hover {
+  color: var(--primary);
+}
+
+/* Resumen de compra en modal */
+.resumen-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #444;
+  font-size: 0.9rem;
+}
+
+.resumen-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Sección de detalle */
+.detalle-header {
+  background: linear-gradient(180deg, #1a0000 0%, var(--bg-dark) 100%);
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #333;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header.hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .card img {
+    height: 220px;
+  }
+}
