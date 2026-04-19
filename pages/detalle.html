@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle - CinePlus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar (Tarea 12) -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="../index.html">🎬 CinePlus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="renta.html">Renta</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4" id="detalle-contenido">
+
+    <!-- Spinner inicial -->
+    <div id="spinner-detalle" class="text-center py-5">
+      <div class="spinner-border" style="color:var(--primary);width:3rem;height:3rem;"></div>
+      <p class="mt-3" style="color:#aaa;">Cargando película...</p>
+    </div>
+
+    <!-- Contenido de la película (se muestra al cargar) -->
+    <div id="detalle-pelicula" style="display:none;">
+
+      <!-- Header del detalle -->
+      <div class="detalle-header rounded mb-4">
+        <h2 id="titulo" class="text-white mb-2"></h2>
+        <div class="mb-2" id="generos-container"></div>
+
+        <!-- Tarea 4: badge dinámico estreno/cartelera + precio -->
+        <div class="d-flex align-items-center gap-3 flex-wrap mt-3">
+          <span id="badge-estado"></span>
+          <span class="precio-tag" id="precio-display"></span>
+        </div>
+      </div>
+
+      <!-- Tarjeta principal: imagen + sinopsis -->
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img id="poster" src="" class="img-fluid rounded-start h-100"
+                 style="object-fit:cover;"
+                 alt="Poster de la película"
+                 onerror="this.src='https://via.placeholder.com/400x500/1f1f1f/e50914?text=Sin+Imagen'">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="text-white mb-3">Sinopsis</h5>
+              <p id="sinopsis" class="detalle-sinopsis"></p>
+              <hr style="border-color:#444;">
+              <p style="color:#aaa;font-size:0.85rem;">
+                <strong style="color:#fff;">Fecha de estreno:</strong>
+                <span id="fecha-estreno"></span>
+              </p>
+
+              <!-- Botón ver tráiler (abre modal) -->
+              <button class="btn btn-trailer mt-2" id="btn-trailer-modal">
+                ▶ Ver Tráiler
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Reseñas (Tarea 7) -->
+      <div class="mb-4">
+        <h4 class="text-white mb-3">⭐ Reseñas del Público</h4>
+        <div id="resenas-container">
+          <div class="text-center py-3">
+            <div class="spinner-border spinner-border-sm" style="color:var(--primary);"></div>
+            <span class="ms-2" style="color:#aaa;">Cargando reseñas...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="../index.html" class="btn btn-secondary">← Volver al Inicio</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal de Tráiler (Tarea 8) -->
+  <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="trailerModalLabel">Tráiler Oficial</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe id="trailerFrame" src="" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container text-center py-3">
+      <small>&copy; 2025 CinePlus. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = parseInt(urlParams.get('id'));
+      const hoy = new Date();
+
+      // Cargar datos de la película
+      $.ajax({
+        url: '../data/peliculas.json',
+        method: 'GET',
+        dataType: 'json',
+        success: function (peliculas) {
+          const peli = peliculas.find(p => p.id === id);
+          if (!peli) { mostrarError(); return; }
+
+          // Rellenar datos
+          $('#titulo').text(peli.titulo);
+          $('#poster').attr('src', '../img/' + peli.imagen);
+          $('#sinopsis').text(peli.sinopsis);
+
+          // Géneros
+          const generosHTML = peli.generos.map(g => `<span class="badge-genero">${g}</span>`).join('');
+          $('#generos-container').html(generosHTML);
+
+          // Fecha de estreno formateada
+          const fecha = new Date(peli.estreno);
+          $('#fecha-estreno').text(fecha.toLocaleDateString('es-EC', { year: 'numeric', month: 'long', day: 'numeric' }));
+
+          // Tarea 4: Badge y precio dinámico
+          const esEstreno = fecha >= hoy;
+          const precio = esEstreno ? peli.precios.estreno : peli.precios.normal;
+
+          if (esEstreno) {
+            $('#badge-estado').html('<span class="badge-estreno">🔥 ESTRENO</span>');
+          } else {
+            $('#badge-estado').html('<span class="badge-cartelera">✅ En Cartelera Regular</span>');
+          }
+          $('#precio-display').text('$' + precio.toFixed(2));
+
+          // Botón de tráiler
+          $('#btn-trailer-modal').on('click', function () {
+            $('#trailerModalLabel').text('Tráiler: ' + peli.titulo);
+            $('#trailerFrame').attr('src', peli.trailer);
+            $('#trailerModal').modal('show');
+          });
+
+          $('#trailerModal').on('hidden.bs.modal', function () {
+            $('#trailerFrame').attr('src', '');
+          });
+
+          // Mostrar contenido con fadeIn
+          $('#spinner-detalle').hide();
+          $('#detalle-pelicula').fadeIn(600);
+
+          // Tarea 7: Cargar reseñas desde resenas.json
+          $.ajax({
+            url: '../data/resenas.json',
+            method: 'GET',
+            dataType: 'json',
+            success: function (resenas) {
+              const listaResenas = resenas[peli.id.toString()];
+              if (!listaResenas || listaResenas.length === 0) {
+                $('#resenas-container').html('<p style="color:#aaa;">No hay reseñas aún.</p>');
+                return;
+              }
+
+              let html = '';
+              listaResenas.forEach(function (r) {
+                // Generar estrellas
+                let estrellas = '';
+                for (let i = 1; i <= 5; i++) {
+                  estrellas += i <= r.calificacion
+                    ? '<span class="estrellas">★</span>'
+                    : '<span class="estrella-vacia">★</span>';
+                }
+
+                html += `
+                  <div class="resena-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="resena-autor">${r.autor}</span>
+                      <span>${estrellas}</span>
+                    </div>
+                    <p class="resena-texto mb-0">${r.texto}</p>
+                  </div>`;
+              });
+
+              $('#resenas-container').html(html);
+            },
+            error: function () {
+              $('#resenas-container').html('<p style="color:#aaa;">No se pudieron cargar las reseñas.</p>');
+            }
+          });
+        },
+        error: function () { mostrarError(); }
+      });
+
+      function mostrarError() {
+        $('#spinner-detalle').hide();
+        $('#detalle-contenido').html(`
+          <div class="alert alert-danger text-center">No se pudo cargar la película.</div>
+          <div class="text-center">
+            <a href="../index.html" class="btn btn-secondary mt-3">← Volver al Inicio</a>
+          </div>`);
+      }
+    });
+  </script>
+</body>
+</html>
